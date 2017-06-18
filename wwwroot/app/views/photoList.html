@@ -1,0 +1,7 @@
+<div  ng-controller="PhotoAlbumController" class="container"> 
+	<div class="row" when-scrolled="loadMore()" >
+		<div ng-repeat="photo in dataToRender" >  
+			<photo-thumbnail src="photo.thumbnailUrl" desc="photo.title" photo-id="photo.id" ></photo-thumbnail>	
+        </div>  
+    </div>
+</div>

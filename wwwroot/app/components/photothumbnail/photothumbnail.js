@@ -3,7 +3,8 @@
         return {
         	bindings: {
         		src: '=',
-                title: '='
+                desc: '=',
+                photoId: '='
         	},            
             templateUrl: 'app/components/photothumbnail/photothumbnail.html'
         }
