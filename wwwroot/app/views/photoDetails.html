@@ -1,3 +1,4 @@
-<div ng-controller="PhotoDetailsController as vm">
-  <strong>{{details}}</strong>
+<div ng-controller="PhotoDetailsController">
+<img class="img-responsive" ng-src="{{details.url}}" title="{{details.title}}"/>
+<h2>{{details.title}}</h2>
 </div>
