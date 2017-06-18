@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: nginx/angularapp
+    ports:
+     - "80:80"
+    volumes:
+     - ./wwwroot:/usr/share/nginx/html

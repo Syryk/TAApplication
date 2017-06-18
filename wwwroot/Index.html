@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>Photo album</title>
+
+<link rel="stylesheet" href="assets/libs/bootstrap/bootstrap.min.css" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+ 
+<body ng-app="PhotoAlbumApp">
+
+	<div  ng-controller="PhotoAlbumController" class="container"> 
+		<div class="row" ng-repeat="photo in photoAlbumData">  
+			<photo-thumbnail src="photo.thumbnailUrl" title="photo.title"></photo-thumbnail>
+		
+        </div>  
+	</div>
+ 
+<script src="assets/libs/angular/angular.min.js"></script>
+<script src="app/app.module.js"></script>
+<script src="app/services/dataService.js"></script>
+<script src="app/controllers/photoAlbumController.js"></script>
+<script src="app/components/photothumbnail/photothumbnail.js"></script>
+ 
+</body>
+ 
+</html>
