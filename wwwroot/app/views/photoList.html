@@ -1,5 +1,5 @@
 <div  ng-controller="PhotoAlbumController" class="container"> 
-	<div class="row" when-scrolled="loadMore()" >
+	<div class="row" infinite-scroll="loadMore()" infinite-scroll-distance="2" >
 		<div ng-repeat="photo in dataToRender" >  
 			<photo-thumbnail src="photo.thumbnailUrl" desc="photo.title" photo-id="photo.id" ></photo-thumbnail>	
         </div>  

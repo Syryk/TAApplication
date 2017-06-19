@@ -1,1 +1,1 @@
-var photoAlbumApp = angular.module('PhotoAlbumApp', ['ui.router', 'ui.bootstrap']);
+var photoAlbumApp = angular.module('PhotoAlbumApp', ['ui.router', 'ui.bootstrap', 'infinite-scroll']);

@@ -3,18 +3,21 @@
 
         $scope.dataToRender = [];
         $scope.counter = 0;
+        $scope.canLoad = false;
         $scope.loadMore = function(){
-            for (var i = 0; i < 50; i++) {
-                $scope.dataToRender.push($scope.photoAlbumData[i]);
-                
+            if($scope.canLoad){
+                for (var i = $scope.counter; i < $scope.counter+50; i++) {
+                    $scope.dataToRender.push($scope.photoAlbumData[i]);
+                }
+                $scope.counter += 50;
             }
-            $scope.counter += 50;
         };
 
         $scope.loadData = function () {
             var data = dataService.GetData()
                 .then(function (response) {
                     $scope.photoAlbumData = response.data;
+                    $scope.canLoad = true;
                     $scope.loadMore();
                 }, function (response) {
                     alert('error, status: ' + response.status + ' statusText - ' + response.statusText);
